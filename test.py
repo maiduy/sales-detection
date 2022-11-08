@@ -5,10 +5,10 @@ import pandas as pd
 
 
 df = pd.read_csv("sales-detection/dataset/train.csv")
-req = df[:10].to_dict(orient='list')
+req = df[5:7].to_dict(orient='list')
 req_json = json.dumps(req)
 print(req_json)
-
+print("==========================")
 URL = "http://127.0.0.1:5000/sale-regression"
 
 headers = {"content-type": "application/json"}
